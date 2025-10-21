@@ -5,8 +5,7 @@
  * @tree: pointer to the root node of the tree to traverse
  * @func: pointer to a function to call for each node
  *
- * Description: pre-order = visit current node → left subtree → right subtree
- * If tree or func is NULL, do nothing.
+ * Description: pre-order = visit current node, then left subtree, then right
  */
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
