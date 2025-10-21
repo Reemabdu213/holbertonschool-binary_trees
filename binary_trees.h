@@ -14,25 +14,31 @@
  */
 struct binary_tree_s
 {
-	int n;
-	struct binary_tree_s *parent;
-	struct binary_tree_s *left;
-	struct binary_tree_s *right;
+    int n;
+    struct binary_tree_s *parent;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
 };
 
 typedef struct binary_tree_s binary_tree_t;
 
 /* Binary Search Tree */
 typedef struct binary_tree_s bst_t;
-
 /* AVL Tree */
 typedef struct binary_tree_s avl_t;
-
 /* Max Binary Heap */
 typedef struct binary_tree_s heap_t;
 
-/* Function prototypes */
+/* Prototypes */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 void binary_tree_print(const binary_tree_t *tree);
+
+/* ➕ أضيفي هذا السطر */
+binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+
+/* (اختياري إن كنتِ تستعملينها في main) */
+// void binary_tree_delete(binary_tree_t *tree);
+// أو إذا اسمها بالملف المساعد:
+// void _binary_tree_delete(binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
